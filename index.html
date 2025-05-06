@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stylens Production</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="images/logo.jpeg" alt="Stylens Logo" class="top-logo" />
+    </div>
+    <nav id="main-nav">
+      <button id="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="#home">Дома</a></li>
+        <li><a href="#about">За Нас</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#packages">Пакети</a></li>
+        <li><a href="#client">Клиентска Зона</a></li>
+        <li><a href="#instagram">Инстаграм</a></li>
+        <li><a href="#contact">Контакт</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <h1>Your Story, Through Our Lens.</h1>
+      <p class="tagline">Professional photography services in Ohrid and Struga</p>
+      <a href="#contact" class="cta-button">Book a Session</a>
+    </div>
+  </section>
+
+  <section id="about" class="section-padding">
+    <div class="container">
+      <h2>За Нас</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="highlight">Stylens Production – Your Partner for Perfect Memories</p>
+          <p>Welcome to Stylens Production, your destination for creative and professional photography in Ohrid, Struga, and the surrounding area.</p>
+          <div class="services-grid">
+            <div class="service-item">
+              <i class="fas fa-user-friends"></i>
+              <h3>Portraits</h3>
+              <p>Personal, family, and corporate portraits.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-ring"></i>
+              <h3>Weddings</h3>
+              <p>Magical wedding photos that capture your love.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-store"></i>
+              <h3>Commercial</h3>
+              <p>Professional images for your company or products.</p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-camera"></i>
+              <h3>Creative</h3>
+              <p>Artistic portraits and special events.</p>
+            </div>
+          </div>
+          <div class="why-choose-us">
+            <h3>Why Choose Us?</h3>
+            <ul>
+              <li><i class="fas fa-check"></i> Personalized service and attention to detail</li>
+              <li><i class="fas fa-check"></i> Fast turnaround and competitive prices</li>
+              <li><i class="fas fa-check"></i> Friendly and professional atmosphere</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section-padding">
+    <div class="container">
+      <h2>Портфолио</h2>
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="wedding">Wedding</button>
+        <button class="filter-btn" data-category="portrait">Portrait</button>
+        <button class="filter-btn" data-category="occasion">Occasion</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item wedding">
+          <img src="images/portfolio1.jpg" alt="Wedding photo" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>Wedding Photography</h3>
+            <p>Capturing special moments</p>
+            <button class="view-btn" onclick="openModal(this.parentElement.parentElement.querySelector('img'))">View</button>
+          </div>
+        </div>
+        
+        <div class="portfolio-item wedding">
+          <img src="images/portfolio5.jpg" alt="Wedding photo" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>Wedding Day</h3>
+            <p>Love and celebration</p>
+            <button class="view-btn" onclick="openModal(this.parentElement.parentElement.querySelector('img'))">View</button>
+          </div>
+        </div>
+
+        <div class="portfolio-item portrait">
+          <img src="images/portfolio2.jpg" alt="Portrait photo" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>Personal Portrait</h3>
+            <p>Professional headshots</p>
+            <button class="view-btn" onclick="openModal(this.parentElement.parentElement.querySelector('img'))">View</button>
+          </div>
+        </div>
+
+        <div class="portfolio-item portrait">
+          <img src="images/359968145_254302720718969_2354321961745956978_n.jpg" alt="Portrait photo" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>Artistic Portrait</h3>
+            <p>Creative photography</p>
+            <button class="view-btn" onclick="openModal(this.parentElement.parentElement.querySelector('img'))">View</button>
+          </div>
+        </div>
+
+        <div class="portfolio-item occasion">
+          <img src="images/portfolio3.png" alt="Special occasion photo" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>Special Events</h3>
+            <p>Celebrations and gatherings</p>
+            <button class="view-btn" onclick="openModal(this.parentElement.parentElement.querySelector('img'))">View</button>
+          </div>
+        </div>
+
+        <div class="portfolio-item occasion">
+          <img src="images/portfolio4.jpg" alt="Special occasion photo" loading="lazy">
+          <div class="portfolio-overlay">
+            <h3>Memorable Moments</h3>
+            <p>Milestones and celebrations</p>
+            <button class="view-btn" onclick="openModal(this.parentElement.parentElement.querySelector('img'))">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="packages" class="section-padding">
+    <div class="container">
+      <h2>Пакети</h2>
+      <div class="packages-grid">
+        <div class="package-card">
+          <div class="package-header">
+            <i class="fas fa-user"></i>
+            <h3>Брз Портрет</h3>
+            <div class="package-price">20€</div>
+          </div>
+          <div class="package-content">
+            <ul>
+              <li>2 обработени фотографии</li>
+              <li>1 бонус фотографија</li>
+              <li>Брза испорака</li>
+            </ul>
+            <a href="#contact" class="package-btn">Резервирај</a>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <div class="package-header">
+            <i class="fas fa-calendar-day"></i>
+            <h3>Настан</h3>
+            <div class="package-price">од 60€<span>/час</span></div>
+          </div>
+          <div class="package-content">
+            <ul>
+              <li>Снимање по час</li>
+              <li>30 професионално уредени фотографии</li>
+              <li>Електронска галерија</li>
+            </ul>
+            <a href="#contact" class="package-btn">Резервирај</a>
+          </div>
+        </div>
+
+        <div class="package-card featured">
+          <div class="package-badge">Најпопуларно</div>
+          <div class="package-header">
+            <i class="fas fa-ring"></i>
+            <h3>Свадбен Пакет</h3>
+            <div class="package-price">од 250€</div>
+          </div>
+          <div class="package-content">
+            <ul>
+              <li>Целодневно покривање</li>
+              <li>100 уредени фотографии</li>
+              <li>Онлајн галерија</li>
+              <li>Пристап до сите необработени фотографии</li>
+            </ul>
+            <a href="#contact" class="package-btn">Резервирај</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="client" class="section-padding">
+    <div class="container">
+      <h2>Клиентска Зона</h2>
+      <div class="client-form">
+        <p>Внесете го вашиот код за да ги видите вашите фотографии.</p>
+        <div class="form-group">
+          <input type="text" id="client-code" placeholder="Внесете код">
+          <button id="access-btn">Отвори Галерија</button>
+        </div>
+        <p class="note">Само клиентите со код имаат пристап за преглед и симнување. Сите слики се со автоматски воден жиг (watermark).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="instagram" class="section-padding">
+    <div class="container">
+      <h2>Instagram</h2>
+      <p class="insta-follow">Следете нѐ на <a href="https://www.instagram.com/stylens_production/" target="_blank">@stylens_production</a></p>
+      <div class="insta-grid">
+        <a href="https://www.instagram.com/stylens_production/" class="insta-item" target="_blank">
+          <img src="images/post1.jpeg.jpeg" alt="Instagram Post 1" loading="lazy">
+          <div class="insta-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/stylens_production/" class="insta-item" target="_blank">
+          <img src="images/post2.jpeg.jpeg" alt="Instagram Post 2" loading="lazy">
+          <div class="insta-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/stylens_production/" class="insta-item" target="_blank">
+          <img src="images/post3.jpeg.jpeg" alt="Instagram Post 3" loading="lazy">
+          <div class="insta-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/stylens_production/" class="insta-item" target="_blank">
+          <img src="images/post4.jpeg.jpeg" alt="Instagram Post 4" loading="lazy">
+          <div class="insta-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/stylens_production/" class="insta-item" target="_blank">
+          <img src="images/post5.jpeg.jpeg" alt="Instagram Post 5" loading="lazy">
+          <div class="insta-overlay">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <h2>Контакт</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>Телефон: <strong>+389 78 929 990</strong></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-facebook"></i>
+            <p>Facebook: <a href="https://www.facebook.com/Stylenss" target="_blank">Stylenss</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-tiktok"></i>
+            <p>TikTok: <a href="https://www.tiktok.com/@stylens.production" target="_blank">@stylens.production</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-instagram"></i>
+            <p>Instagram: <a href="https://www.instagram.com/stylens_production/" target="_blank">@stylens_production</a></p>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Име</label>
+              <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Емаил</label>
+              <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Порака</label>
+              <textarea id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Испрати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo.jpeg" alt="Stylens Logo" class="bottom-logo">
+      </div>
+      <div class="footer-links">
+        <a href="#home">Дома</a>
+        <a href="#about">За Нас</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#packages">Пакети</a>
+        <a href="#contact">Контакт</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/Stylenss" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/stylens_production/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@stylens.production" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Stylens Production · <a href="https://www.stylenspro.mk" target="_blank">www.stylenspro.mk</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for image popup -->
+  <div id="imageModal" class="modal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="modal-controls">
+      <button id="prevImage"><i class="fas fa-chevron-left"></i></button>
+      <button id="nextImage"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('nav-menu').classList.toggle('show');
+    });
+
+    // Portfolio Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const category = button.getAttribute('data-category');
+        
+        // Show all items if 'all' is selected, otherwise filter
+        portfolioItems.forEach(item => {
+          if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModal = document.querySelector('.close-modal');
+    const prevBtn = document.getElementById('prevImage');
+    const nextBtn = document.getElementById('nextImage');
+    let currentIndex = 0;
+    let visibleImages = [];
+
+    function updateVisibleImages() {
+      // Get all currently visible portfolio items based on filter
+      visibleImages = [];
+      portfolioItems.forEach(item => {
+        if (item.style.display !== 'none') {
+          visibleImages.push(item.querySelector('img'));
+        }
+      });
+    }
+
+    function openModal(img) {
+      updateVisibleImages();
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+      currentIndex = visibleImages.findIndex(image => image.src === img.src);
+    }
+
+    closeModal.onclick = function() {
+      modal.style.display = 'none';
+    }
+
+    prevBtn.onclick = function() {
+      currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
+      modalImg.src = visibleImages[currentIndex].src;
+    }
+
+    nextBtn.onclick = function() {
+      currentIndex = (currentIndex + 1) % visibleImages.length;
+      modalImg.src = visibleImages[currentIndex].src;
+    }
+
+    // Close modal when clicking outside the image
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // Form submission (prevent default)
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! We will contact you soon.');
+      this.reset();
+    });
+
+    // Client zone functionality
+    document.getElementById('access-btn').addEventListener('click', function() {
+      const code = document.getElementById('client-code').value;
+      if (code) {
+        alert('Validating code: ' + code + '\nThis would connect to a backend to validate the code and show the client gallery.');
+      } else {
+        alert('Please enter your client code');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        document.getElementById('nav-menu').classList.remove('show');
+      });
+    });
+  </script>
+</body>
+</html>
